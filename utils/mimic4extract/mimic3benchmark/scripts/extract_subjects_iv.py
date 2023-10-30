@@ -29,9 +29,10 @@ try:
 except:
     pass
 
-patients = read_patients_table(f'{args.mimic3_path}/core/patients.csv')
+# CHANGED FROM SOURCE
+patients = read_patients_table(f'{args.mimic3_path}/hosp/patients.csv')
 
-admits = read_admissions_table(f'{args.mimic3_path}/core/admissions.csv')
+admits = read_admissions_table(f'{args.mimic3_path}/hosp/admissions.csv')
 
 
 stays = read_icustays_table(f'{args.mimic3_path}/icu/icustays.csv')
